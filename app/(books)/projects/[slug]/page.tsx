@@ -19,7 +19,9 @@ export default async function ProjectPage({ params }: any) {
 
       {/* Texture */}
       <div className="absolute inset-0 bg-[url('/paper-texture.png')] opacity-40 mix-blend-multiply pointer-events-none" />
-
+      {/* Page edge */}
+      <div className="absolute right-0 top-0 h-full w-[15px] bg-gradient-to-l from-[#e8dfd3] to-transparent" />
+      
       {/* BACK BUTTON */}
       <Link
         href="/projects"
@@ -60,6 +62,19 @@ export default async function ProjectPage({ params }: any) {
             {project.description}
           </p>
 
+          {project.tags && (
+              <div className="mb-8 flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs font-serif px-2 py-1 border border-gray-300 rounded-sm text-gray-700 bg-[#f5efe6]"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+
           {project.image && (
             <div className="my-8">
                 <Image
@@ -69,6 +84,13 @@ export default async function ProjectPage({ params }: any) {
                 height={450}
                 className="w-full h-auto rounded-md"
                 />
+
+                {/* Caption */}
+                {project.image_desc && (
+                  <p className="mt-2 text-sm font-serif text-gray-600 italic text-center">
+                    {project.image_desc}
+                  </p>
+                )}
             </div>
             )}
 

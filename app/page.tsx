@@ -14,10 +14,10 @@ export default function Home() {
         <section className="relative mb-16">
 
           {/* CENTERED CONTENT */}
-          <div className="flex items-center justify-center gap-4 pt-6 max-w-4xl mx-auto">
+          <div className="flex items-center justify-center gap-4 pt-6 pb-12 max-w-4xl mx-auto">
 
             {/* FRAME */}
-            <div className="relative w-60 h-70 rotate-[-4deg]">
+            <div className="relative w-60 h-70 rotate-[-4deg] drop-shadow-[0_8px_10px_rgba(0,0,0,0.15)]">
               <Image
                 src="/me.png"
                 alt="me"
@@ -26,10 +26,10 @@ export default function Home() {
               />
             </div>
 
-            {/* TEXT */}
+            {/* NAME & INTRO */}
             <div className="max-w-lg">
               <div className="flex items-center gap-4 mb-4">
-                <h1 className="text-3xl font-semibold">
+                <h1 className="text-4xl font-semibold">
                   Brianna Huang
                 </h1>
 
@@ -59,26 +59,32 @@ export default function Home() {
 
         <section className="relative mt-18 mb-24 h-[200px]">
 
-          {/* DESK LINE */}
-          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 w-[800px] h-[5px] bg-gray-300" />
-          
-          {/* BOOK STACK */}
-          <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-[320px]">
+          {/* DESK */}
+          <Image
+            src="/desk.png"
+            alt="desk"
+            width={1200}
+            height={200}
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-auto scale-y-65 drop-shadow-[0_6px_10px_rgba(0,0,0,0.15)]"
+          />
 
+          {/* BOOK STACK */}
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-[80px] w-[320px] drop-shadow-[0_8px_10px_rgba(0,0,0,0.1)]">
+            {/* <div className="absolute bottom-[-8px] left-1/2 -translate-x-1/2 w-[260px] h-[10px] bg-black/15 blur-md rounded-full" /> */}
             {/* Books */}
-            <div className="absolute bottom-[178px] z-40 -translate-x-2">
+            <div className="absolute bottom-[178px] z-40 translate-x-2">
               <Book href="/projects" image="/blue-book.png" title="Projects" />
             </div>
 
-            <div className="absolute bottom-[120px] z-30 translate-x-2">
+            <div className="absolute bottom-[120px] z-30 -translate-x-1">
               <Book href="/experience" image="/pink-book.png" title="Experience" />
             </div>
 
-            <div className="absolute bottom-[63px] z-20">
+            <div className="absolute bottom-[63px] z-20 translate-x-3" >
               <Book href="/education" image="/purple-book.png" title="Education" />
             </div>
 
-            <div className="absolute bottom-[0px] z-10 translate-x-1">
+            <div className="absolute bottom-[0px] z-10 translate-x-2">
               <Book href="/misc" image="/green-book.png" title="Misc" />
             </div>
 
@@ -97,7 +103,7 @@ export default function Home() {
               alt="mug"
               width={180}
               height={220}
-              className="absolute left-full ml-[-40px] bottom-0"
+              className="absolute left-full ml-[-25px] bottom-0"
             />
 
           </div>

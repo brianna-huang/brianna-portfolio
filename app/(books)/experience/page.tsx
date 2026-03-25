@@ -6,7 +6,9 @@ export default function ExperiencePage() {
 
       {/* Texture */}
       <div className="absolute inset-0 bg-[url('/paper-texture.png')] opacity-40 mix-blend-multiply pointer-events-none" />
-
+      {/* Page edge */}
+      <div className="absolute right-0 top-0 h-full w-[15px] bg-gradient-to-l from-[#e8dfd3] to-transparent" />
+      
       {/* Content wrapper */}
       <div className="relative z-10">
         <div className="max-w-2xl mx-auto px-6 py-10">
