@@ -26,7 +26,7 @@ export default function BooksMenu() {
     { title: "Projects", href: "/projects" },
     { title: "Experience", href: "/experience" },
     { title: "Education", href: "/education" },
-    { title: "Misc", href: "/misc" },
+    { title: "More", href: "/misc" },
   ];
 
   return (

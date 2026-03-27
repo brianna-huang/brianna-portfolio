@@ -4,7 +4,8 @@ export const projects = [
     slug: "brats-app",
     title: "Brain Tumor Segmentation App",
     description:
-      "Web app to visualize tumor segmentations on MRI scans using deep learning models.",
+      "Web app to visualize AI-detected tumor segmentations with slice navigation and adjustable visualizations on user-uploaded MRI scans. \
+      Model is a U-Net convolutional neural network using expert-drawn contours and Dice coefficient loss to segment tumors across MRI modalities. ",
     github: "https://github.com/brianna-huang/brats-app",
     image: "/brats-demo.png",
     image_desc: "Main viewer allowing slice scrolling and AI-detected tumor overlays.",
@@ -14,7 +15,7 @@ export const projects = [
     slug: "medical-imaging",
     title: "Medical Imaging Analysis with Deep Learning",
     description:
-      "Using AI tools for segmentation, anomaly detection, and reconstruction of medical images.",
+      "Using AI tools with Python and Keras to analyze medical imaging data for anomaly detection, image restoration, and segmentation including on X-rays, MRI cardiac scans, and ultrasound.",
     github: "https://github.com/brianna-huang/medical-imaging",
     image: "/medical-imaging-demo.png",
     image_desc: "Reconstructed ultrasound using Fourier Transform.",
@@ -24,7 +25,7 @@ export const projects = [
     slug: "movie-chain-game",
     title: "Movie Chain Game",
     description:
-      "Movie-themed chain game supported by movie & IMDB databases",
+      "Web app centered around a movie-themed chain game, incorporating a login feature using Auth0 and a movie recommendation feature using public movie APIs & IMDB databases.",
     github: "https://github.com/brianna-huang/syntax-terror",
     image: "/movie-game-demo.png",
     image_desc: "Main game instructions page.",

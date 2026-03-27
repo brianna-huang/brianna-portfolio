@@ -85,7 +85,7 @@ export default function Home() {
             </div>
 
             <div className="absolute bottom-[0px] z-10 translate-x-2">
-              <Book href="/misc" image="/green-book.png" title="Misc" />
+              <Book href="/misc" image="/green-book.png" title="More" />
             </div>
 
             {/* PLANT (anchored to stack) */}
