@@ -5,59 +5,59 @@ import { Github, Linkedin, ArrowDownToLine } from "lucide-react";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#fdfaf6] px-6 py-6 relative text-gray-900 font-serif">
+    <main className="min-h-screen overflow-x-hidden bg-[#fdfaf6] px-6 py-6 relative text-gray-900 font-serif">
+      
       {/* Texture */}
       <div className="absolute inset-0 bg-[url('/paper-texture.png')] opacity-40 mix-blend-multiply pointer-events-none" />
       <div className="max-w-6xl mx-auto">
 
         {/* TOP: Frame + Intro */}
-        <section className="relative mb-16">
+        <div className="flex flex-col items-center md:flex-row md:items-center md:justify-center gap-6 pt-6 pb-12 max-w-4xl mx-auto">
 
-          {/* CENTERED CONTENT */}
-          <div className="flex items-center justify-center gap-4 pt-6 pb-12 max-w-4xl mx-auto">
+          {/* LEFT: IMAGE */}
+          <div className="relative w-44 h-52 md:w-60 md:h-70 rotate-[-4deg] drop-shadow-[0_8px_10px_rgba(0,0,0,0.15)]">
+            <Image
+              src="/me.png"
+              alt="me"
+              fill
+              className="object-cover p-3"
+            />
+          </div>
 
-            {/* FRAME */}
-            <div className="relative w-60 h-70 rotate-[-4deg] drop-shadow-[0_8px_10px_rgba(0,0,0,0.15)]">
-              <Image
-                src="/me.png"
-                alt="me"
-                fill
-                className="object-cover p-3"
-              />
-            </div>
+          {/* RIGHT: TEXT BLOCK */}
+          <div className="flex flex-col items-center md:items-start max-w-lg">
 
-            {/* NAME & INTRO */}
-            <div className="max-w-lg">
-              <div className="flex items-center gap-4 mb-4">
-                <h1 className="text-4xl font-semibold">
-                  Brianna Huang
-                </h1>
+            {/* NAME + ICONS */}
+            <div className="flex flex-col md:flex-row items-center md:items-center gap-2 md:gap-4 mb-3">
 
-                {/* ICONS */}
-                <div className="flex gap-3 text-gray-500">
-                  <a href="https://github.com/brianna-huang" target="_blank" className="hover:text-black transition">
-                    <Github size={18} />
-                  </a>
-                  <a href="https://linkedin.com/in/brianna-huang" target="_blank" className="hover:text-black transition">
-                    <Linkedin size={18} />
-                  </a>
-                  <a href="/BH_resume.pdf" download className="hover:text-black transition">
-                    <ArrowDownToLine size={18}/>
-                  </a>
-                </div>
+              <h1 className="text-3xl md:text-4xl font-semibold text-center md:text-left leading-tight">
+                Brianna<br className="md:hidden" /> Huang
+              </h1>
+
+              <div className="flex gap-3 text-gray-500">
+                <a href="https://github.com/brianna-huang" target="_blank" className="hover:text-black transition">
+                  <Github size={18} />
+                </a>
+                <a href="https://linkedin.com/in/brianna-huang" target="_blank" className="hover:text-black transition">
+                  <Linkedin size={18} />
+                </a>
+                <a href="/BH_resume.pdf" download className="hover:text-black transition">
+                  <ArrowDownToLine size={18}/>
+                </a>
               </div>
-
-              <p className="text-lg leading-relaxed text-gray-700">
-                I'm a software engineer passionate about exploring the crossroads
-                of computer science and medicine, and developing data-driven ways
-                to solve healthcare problems using AI.
-              </p>
             </div>
+
+            {/* INTRO TEXT */}
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 text-center md:text-left">
+              I'm a software engineer passionate about exploring the crossroads
+              of computer science and medicine, and developing data-driven ways
+              to solve healthcare problems using AI.
+            </p>
 
           </div>
-        </section>
+        </div>
 
-        <section className="relative mt-18 mb-24 h-[200px]">
+        <section className="relative mt-18 mb-24 h-[200px] hidden md:block">
 
           {/* DESK */}
           <Image
@@ -108,6 +108,14 @@ export default function Home() {
 
           </div>
 
+        </section>
+
+        {/* BOOK STACK (mobile)*/}
+        <section className="md:hidden flex flex-col items-center -space-y-5 mb-16">
+          <Book href="/projects" image="/blue-book.png" title="Projects" />
+          <Book href="/experience" image="/pink-book.png" title="Experience" />
+          <Book href="/education" image="/purple-book.png" title="Education" />
+          <Book href="/misc" image="/green-book.png" title="More" />
         </section>
 
       </div>

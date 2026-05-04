@@ -23,7 +23,7 @@ export default async function SubjPage({ params }: any) {
         href="/misc"
         className="fixed bottom-10 left-10 font-serif text-sm text-gray-700 hover:text-black"
       >
-        ← Back to misc.
+        ← Back to more
       </Link>
 
       {/* PAGE CONTENT */}

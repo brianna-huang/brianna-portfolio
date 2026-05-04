@@ -18,17 +18,28 @@ export default function ExperiencePage() {
           </h1>
 
             <ol className="space-y-8 font-serif text-gray-800">
-            {experience.map((job, i) => (
+              {experience.map((job) => (
                 <li key={job.company}>
-                <div className="flex justify-between items-baseline">
+                  <div className="flex justify-between items-baseline">
                     <span className="text-lg">{job.company}</span>
                     <span className="text-m"> – {job.position}</span>
                     <span className="flex-1 border-b border-dotted mx-2 mb-1"></span>
                     <span>{job.dates}</span>
-                </div>
-                <p className="text-gray-700 mt-1">{job.description}</p>
+                  </div>
+
+                  {/* Location */}
+                  {job.location && (
+                    <div className="text-sm text-gray-500 mt-1">{job.location}</div>
+                  )}
+
+                  {/* Bullets */}
+                  <ul className="list-disc ml-5 mt-2 space-y-1 text-gray-700">
+                    {job.bullets.map((bullet, idx) => (
+                      <li key={idx}>{bullet}</li>
+                    ))}
+                  </ul>
                 </li>
-            ))}
+              ))}
             </ol>
         </div>
       </div>
