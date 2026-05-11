@@ -12,8 +12,18 @@ export const projects = [
     tags: ["Python", "Flask", "React", "PyTorch", "Medical imaging"]
   },
   {
+    slug: "ai-receptionist",
+    title: "AI Medical Scheduling Chatbot",
+    description:
+      "A conversational healthcare scheduling agent using Python, LangGraph, FastAPI, and OpenAI GPT-4o-mini. Implemented graph-based conversational workflows, LLM-powered structured data extraction, Google Maps address validation, and interactive appointment selection UI",
+    github: "https://github.com/brianna-huang/ai-receptionist",
+    image: "/ai-receptionist.png",
+    image_desc: "Main chat window",
+    tags: ["Python", "FastAPI", "LangGraph", "Streamlit", "OpenAI API", "Google Maps API"]
+  },
+  {
     slug: "medical-imaging",
-    title: "Medical Imaging Analysis with Deep Learning",
+    title: "Medical Imaging Analysis",
     description:
       "Using AI tools with Python and Keras to analyze medical imaging data for anomaly detection, image restoration, and segmentation including on X-rays, MRI cardiac scans, and ultrasound.",
     github: "https://github.com/brianna-huang/medical-imaging",
